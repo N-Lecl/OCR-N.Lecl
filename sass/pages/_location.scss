@@ -1,0 +1,16 @@
+//Location
+.location{
+    height: 50px;
+    background-color:$color-lightgrey;
+    i{
+        padding-right: 15px;
+        color:$color-darkgrey;
+    }
+    &:first-child{
+        justify-content: center;
+        align-items: center;
+        color:$color-darkgrey;
+        font-weight: 700;
+        @extend %typography-description;
+    }
+}

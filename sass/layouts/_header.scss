@@ -1,0 +1,35 @@
+// Header
+header {
+    display: flex;
+    height: 60px;
+    @include breakpoints(tablet){
+        height: 80px;
+    }
+}
+.header_homepage{
+    justify-content: center;
+    img{
+        height: 50%;
+        align-self: center;
+    }
+}
+.header_menu{
+    justify-content: space-between;
+    a{
+        width: 60px;
+        text-align: center;
+        align-self: center;
+    }
+    a i{
+        margin: auto;
+        font-size: 20px;
+    }
+}
+.logo{
+    flex: 1;
+    text-align: center;
+    img{
+        height: 50%;
+        margin: 15px;
+    }
+}

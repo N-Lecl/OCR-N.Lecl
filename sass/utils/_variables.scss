@@ -1,0 +1,28 @@
+// Variables
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-darkgrey:#353535;
+$color-grey:#F6F6F6;
+$color-lightgrey:#EAEAEA;
+$color-medgrey:#7E7E7E;
+$color-white:#FFF;
+
+//Background image menu's pages
+$images-resto:(
+    palette-du-gout:'jay-wennington-N_Y88TWmGwA-unsplash.jpg',
+    note-enchantee:'stil-u2Lp8tXIcjw-unsplash.jpg',
+    a-la-francaise:'toa-heftiba-DQKerTsQwi0-unsplash.jpg',
+    delice-des-sens:'louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg'
+);
+
+//Animation menu
+$check-transition-width: 70px;
+$menu-appear-delay: 250ms;
+$max-dishes: 4;
+
+//Breakpoints
+$breakpoints-map:(
+    tablet: 768px,
+    desktop: 1024px
+);

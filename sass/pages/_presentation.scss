@@ -1,0 +1,19 @@
+//Presentation section
+.presentation {
+    flex-direction: column;
+    background-color: $color-grey;
+    h1{
+        margin-top: 40px;
+        margin-bottom: auto;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        font-weight: 200;
+        color: #505050;
+        margin-top: 20px;
+    }
+}
+a .btn-pink{
+    justify-content: center;
+}

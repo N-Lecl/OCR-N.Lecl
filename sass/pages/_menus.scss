@@ -1,0 +1,175 @@
+//Menus section
+.menu{
+    background-color: $color-grey;
+    border-radius: 40px 40px 0 0;
+    transform: translateY(-30px);
+    padding-bottom: 30px;
+    margin-bottom: -30px;
+    @include breakpoints(desktop){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.pictureRestaurant{
+    height: 250px;
+    &.la_palette_du_gout{
+        @include resto-bkgd(palette-du-gout);
+    }
+    &.la_note_enchantee{
+        @include resto-bkgd(note-enchantee);
+    }
+    &.a_la_francaise{
+        @include resto-bkgd(a-la-francaise);
+    }
+    &.le_delice_des_sens{
+        @include resto-bkgd(delice-des-sens);
+    }
+}
+.nameRestaurant{
+    justify-content: space-between;
+    margin: 0 25px;
+    align-items: baseline;
+    height: 100px;
+    padding-top: 30px;
+    h2{
+        @extend %typography-resto;
+    }
+    i{
+        font-size: 25px;
+    }
+    @include breakpoints(desktop){
+        width: 100%;
+    }
+}
+.submenu-list{
+    @include breakpoints(desktop){
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 20px;
+    }
+}
+.submenu{
+    margin: 0 20px;
+    padding-top: 20px;
+    @include breakpoints(desktop){
+        margin: initial;
+    }
+    h3{
+        text-transform: uppercase;
+        font-weight: 200;
+        margin: 20px 0 0 5px;
+        &::after{
+            content: "";
+            display: block;
+            background-color: $color-tertiary;
+            height: 3px;
+            width: 40px;
+            margin-top: 5px;
+        }
+    }
+    @include breakpoints(desktop){
+        width: 32%;
+    }
+}
+.dishes{
+    border-radius: 20px;
+    background-color: $color-white;
+    padding: 0;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 14px;
+    border-radius: 1rem;
+    overflow: hidden;
+    @include shadow-box;
+    @include breakpoints(desktop){
+        height: 80px;
+    }
+    .check__animation{
+        background-color: $color-tertiary;
+        width: $check-transition-width;
+        transform-origin: right;
+        transform: scaleX(0);
+        @include check-transition-timing(transform);
+        @include breakpoints(desktop){
+            position: absolute;
+            right: 0;
+            height: 80px;
+        }
+        .anim_icon{
+            color: $color-white;
+            font-size: 1.6rem;
+            margin: auto;
+            transform: rotate(0deg);
+            @include check-transition-timing(transform);
+        }
+    }
+    &:hover{
+        cursor: pointer;
+    }
+    &:hover .dishes_text{
+        width: 60%;
+        .dish_name, p{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+    &:hover .check__animation{
+        transform: scaleX(1);
+    }
+    &:hover .anim_icon{
+        transform: rotate(360deg);
+    }
+    &:hover .dishes_price{
+        transform: translateX(-$check-transition-width);
+    }
+    @keyframes menu-load{
+        0% {
+            transform: translateY(20px);
+        }
+        75%{
+            opacity: .5;
+        }
+        100% {
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+    @for $i from 1 through ($max-dishes){
+        &:nth-of-type(#{$i}){
+            animation: menu-load 800ms $menu-appear-delay*$i forwards;
+        }
+    }
+}
+.dishes_text{
+    width: 80%;
+    justify-content: space-between;
+    font-weight: 200;
+    padding: 12px 12px; 
+    @extend %typography-description;
+    @include check-transition-timing(width);
+}
+.dish_name{
+    font-weight: 600;
+    margin-bottom: 5px;
+    @extend %typography-subtitle;
+}
+.dishes_price{
+    align-self: flex-end;
+    text-align: center;
+    font-weight: 500;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    @include check-transition-timing(transform);
+}
+.menu .btn-menu{
+    margin-top: 50px;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    @include breakpoints(desktop){
+        width: 100%;
+    }
+}

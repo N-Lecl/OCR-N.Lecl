@@ -1,0 +1,50 @@
+//Functioning section
+.functioning{
+    flex-direction: column;
+    margin: 50px 20px 50px 35px;
+    h2{
+        margin-bottom: 30px;
+        margin-left: -15px;
+    }
+    a{
+        margin-bottom: 20px;
+    }
+    @include breakpoints(tablet){
+        align-items: center;
+    }
+}
+.functioning_list{
+    flex-direction: column;
+    @include breakpoints(tablet){
+        width: 100%;
+        align-items: center;
+    }
+    @include breakpoints(desktop){
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+a .circle{
+    color:$color-white;
+    background-color: $color-primary;
+    border-radius: 60px;
+    padding: 3px 7px;
+    font-size: 15px;
+    margin-left: -10px;
+    overflow: visible;
+}
+.icon{
+    color: $color-medgrey;
+    margin: 0 30px;
+    font-size: 20px;
+    width: 3%;
+    @include breakpoints(desktop){
+        margin: 0 15px;
+    }
+}
+.btn-fnct span{
+    flex-grow: 2;
+    @include breakpoints(desktop){
+        margin-left: 15px;
+    }
+}

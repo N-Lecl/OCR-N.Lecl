@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a, a:hover, a:active, a:focus{
+    text-decoration: none;
+    color: inherit;
+}
+.flex{
+    display: flex;
+}
+h1, h2{
+    @extend %typography-title; 
+}
+h3{
+    @extend %typography-subtitle;
+}
+p, ul{
+    @extend %typography-description;
+}

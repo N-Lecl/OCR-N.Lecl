@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood!</title>
+    
+    <!--****** Stylesheet ******-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/svg" href="assets/css/images/logo/ohmyfood@2x.svg">
+</head>
+
+<body>
+    <!--****** Load spinner ******-->
+    <div class="loading-page flex">
+        <div class="la-ball-newton-cradle la-2x">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+        </div>
+    </div>
+
+    <!--****** Header ******-->
+    <header class="header_homepage">
+        <img src="assets/css/images/logo/ohmyfood.png" alt="logo">
+    </header>
+    
+    <!--****** Main ******-->
+    <main>
+        <!--****** Location bar ******-->
+        <div class="location flex">
+            <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
+        </div>
+        <!--****** Presentation section ******-->
+        <section class="presentation flex"> 
+            <h1>Réservez le menu qui <br> vous convient</h1>
+            <p>Découvrez des restaurants d'exception,<br> sélectionnés par nos soins.</p>
+            <a href="#restaurants" class="btn-pink flex">Explorez nos restaurants</a>
+        </section>
+        <!--****** Functioning section ******-->
+        <section class="functioning flex">
+            <h2>Fonctionnement</h2>
+            <div class="functioning_list flex">
+                <a class="btn-fnct flex"><div class="circle flex">1</div><i class="fas fa-mobile-alt icon"></i><span>Choisissez un restaurant</span></a>
+                <a class="btn-fnct flex"><div class="circle flex">2</div><i class="fas fa-list-ul icon"></i><span>Composez votre menu</span></a>
+                <a class="btn-fnct flex"><div class="circle flex">3</div><i class="fas fa-store icon"></i><span>Dégustez un restaurant</span></a>
+            </div>
+        </section>
+        <!--****** Restaurants section ******-->
+        <section class="restaurants flex" id="restaurants">
+            <h2>Restaurants</h2>
+                <div class="restaurants_list">
+                    <a href="la_palette_du_gout.html">
+                        <figure>
+                            <div class="new">Nouveau</div>
+                            <img src="assets/css/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                            <figcaption>
+                                <div class="description flex">
+                                <h3>La palette du goût</h3>
+                                <p>MénilMontant</p>
+                                </div>
+                                <div class="iconFavorite flex"><i class="far fa-heart emptyHeart"><i class="fas fa-heart fullHeart"></i></i></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="la_note_enchantee.html">
+                        <figure>
+                            <div class="new">Nouveau</div>
+                            <img src="assets/css/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                            <figcaption>
+                                <div class="description flex">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                                </div>
+                                <div class="iconFavorite flex"><i class="far fa-heart emptyHeart"><i class="fas fa-heart fullHeart"></i></i></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="a_la_francaise.html">
+                        <figure>
+                            <img src="assets/css/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                            <figcaption>
+                                <div class="description flex">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                                </div>
+                                <div class="iconFavorite flex"><i class="far fa-heart emptyHeart"><i class="fas fa-heart fullHeart"></i></i></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="le_delice_des_sens.html">
+                        <figure>
+                            <img src="assets/css/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                            <figcaption>
+                                <div class="description flex">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                                </div>
+                                <div class="iconFavorite flex"><i class="far fa-heart emptyHeart"><i class="fas fa-heart fullHeart"></i></i></div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+        </section>
+    </main>
+    <!--****** Footer ******-->
+    <footer>
+        <div class="titleFooter">Ohmyfood</div>
+        <ul>
+            <li><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+            <li><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
